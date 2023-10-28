@@ -11,6 +11,8 @@ public class Movie {
     void  showTechnicalSheet() {
         System.out.println("Nome do filme: " + name);
         System.out.println("Ano de lançamento: " + releaseYear);
+
+        if(includedInThePlan) System.out.println("Filme incluido no plano");
     }
 
     void avaliation(double note){

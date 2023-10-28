@@ -4,6 +4,7 @@ public class Main {
         movie.name = "Elementos";
         movie.releaseYear = 2023;
         movie.durationInMinutes = 102;
+        movie.includedInThePlan = true;
 
         movie.showTechnicalSheet();
         movie.avaliation(10);
