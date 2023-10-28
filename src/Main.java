@@ -5,8 +5,7 @@ public class Main {
         movie.releaseYear = 2023;
         movie.durationInMinutes = 102;
 
-        System.out.println(movie.name);
-        System.out.println(movie.releaseYear);
+        movie.showTechnicalSheet();
 
     }
 }
