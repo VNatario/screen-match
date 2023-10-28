@@ -6,6 +6,13 @@ public class Main {
         movie.durationInMinutes = 102;
 
         movie.showTechnicalSheet();
+        movie.avaliation(10);
+        movie.avaliation(2);
+
+        System.out.println(movie.sumOfRatings);
+        System.out.println(movie.totalRatings);
+
+        System.out.println(movie.getMedia());
 
     }
 }
