@@ -1,3 +1,5 @@
+import br.com.alura.screenmatch.models.Movie;
+
 public class Main {
     public static void main(String[] args) {
         Movie movie = new Movie();
@@ -6,14 +8,17 @@ public class Main {
         movie.durationInMinutes = 102;
         movie.includedInThePlan = true;
 
+        //metodo de exibir ficha tecnica do filme
         movie.showTechnicalSheet();
-        movie.avaliation(10);
-        movie.avaliation(2);
 
-        System.out.println(movie.sumOfRatings);
-        System.out.println(movie.totalRatings);
+        //metodo de avaliar o filme
+        movie.setEvaluationTheMovie(10);
+        movie.setEvaluationTheMovie(8);
 
-        System.out.println(movie.getMedia());
+        System.out.println("Total de avaliações: " +movie.getTotalRatings());
+
+        System.out.println("Média de avaliações: "+movie.getEvaluationAverage());
+
 
     }
 }

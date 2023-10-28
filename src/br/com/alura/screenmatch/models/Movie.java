@@ -1,11 +1,13 @@
+package br.com.alura.screenmatch.models;
+
 // lendo uma classe:
 // coisas que um filme tem
 public class Movie {
     String name;
     int releaseYear;
     boolean includedInThePlan;
-    double sumOfRatings;
-    int totalRatings;
+    private double sumOfRatings;
+    private int totalRatings;
     int durationInMinutes;
 
     void  showTechnicalSheet() {
@@ -15,13 +17,18 @@ public class Movie {
         if(includedInThePlan) System.out.println("Filme incluido no plano");
     }
 
-    void avaliation(double note){
+    void setEvaluationTheMovie(double note){
         sumOfRatings += note;
         totalRatings++;
     }
 
-    double getMedia(){
+    // Pega avaliação media dos filmes
+    double  getEvaluationAverage(){
         return sumOfRatings/totalRatings;
+    }
+
+    int getTotalRatings() {
+        return totalRatings;
     }
 
 }
