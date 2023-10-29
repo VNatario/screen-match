@@ -3,10 +3,11 @@ import br.com.alura.screenmatch.models.Movie;
 public class Main {
     public static void main(String[] args) {
         Movie movie = new Movie();
-        movie.name = "Elementos";
-        movie.releaseYear = 2023;
-        movie.durationInMinutes = 102;
-        movie.includedInThePlan = true;
+
+        movie.setName("Elementos");
+        movie.setReleaseYear(2023);
+        movie.setDurationInMinutes(102);
+        movie.setIncludedInThePlan(true);
 
         //metodo de exibir ficha tecnica do filme
         movie.showTechnicalSheet();

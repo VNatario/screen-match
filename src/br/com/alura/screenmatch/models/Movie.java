@@ -3,32 +3,49 @@ package br.com.alura.screenmatch.models;
 // lendo uma classe:
 // coisas que um filme tem
 public class Movie {
-    String name;
-    int releaseYear;
-    boolean includedInThePlan;
+    private String name;
+    private int releaseYear;
+    private int durationInMinutes;
+    private boolean includedInThePlan;
+
     private double sumOfRatings;
     private int totalRatings;
-    int durationInMinutes;
 
-    void  showTechnicalSheet() {
+    public void  showTechnicalSheet() {
         System.out.println("Nome do filme: " + name);
         System.out.println("Ano de lançamento: " + releaseYear);
+        System.out.println("Duração do filme: "+durationInMinutes+ " min.");
 
         if(includedInThePlan) System.out.println("Filme incluido no plano");
     }
 
-    void setEvaluationTheMovie(double note){
+    public void setEvaluationTheMovie(double note){
         sumOfRatings += note;
         totalRatings++;
     }
 
     // Pega avaliação media dos filmes
-    double  getEvaluationAverage(){
+    public double  getEvaluationAverage(){
         return sumOfRatings/totalRatings;
     }
 
-    int getTotalRatings() {
+    public int getTotalRatings() {
         return totalRatings;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public void setIncludedInThePlan(boolean includedInThePlan) {
+        this.includedInThePlan = includedInThePlan;
+    }
+
+    public void setDurationInMinutes(int durationInMinutes) {
+        this.durationInMinutes = durationInMinutes;
+    }
 }
