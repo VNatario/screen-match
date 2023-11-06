@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculos.TimeCalculator;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Series;
 
@@ -33,5 +34,18 @@ public class Main {
         lost.setEpisodesBySeasons(8);
         lost.setMinutesPerEpisode(20);
         System.out.println("Duração da série: " +lost.getDurationInMinutes()+ " min.");
+
+        Movie mulan = new Movie();
+        mulan.setName("Mulan");
+        mulan.setReleaseYear(1998);
+        mulan.setDurationInMinutes(88);
+        mulan.setIncludedInThePlan(true);
+
+
+        TimeCalculator calc = new TimeCalculator();
+        calc.includes(movie);
+        calc.includes(mulan);
+        calc.includes(lost);
+        System.out.println("TEMPO TOTAL: " +calc.getTotalTime()+" min");
     }
 }
