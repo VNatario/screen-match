@@ -31,6 +31,7 @@ public class Main {
         lost.showTechnicalSheet();
         lost.setSeasons(10);
         lost.setEpisodesBySeasons(8);
-
+        lost.setMinutesPerEpisode(20);
+        System.out.println("Duração da série: " +lost.getDurationInMinutes()+ " min.");
     }
 }
